@@ -1,8 +1,11 @@
 import React from 'react';
 
-import Hello, {Test} from './Hello';
+import Hello from './Hello';
+import Test from './Test';
+import store from './store/repo';
 
 
+const Title = value => <div>{Object.keys(value)}</div>;
 
 class App extends React.Component{
   render(){
@@ -10,7 +13,8 @@ class App extends React.Component{
       <div>
         <Hello name="World" />
         <div>
-          on my new macbook , wow!!!!!!!!!!!!!!!!!
+          <Test store={store}></Test>
+          <Title some="hi"></Title>
         </div>
       </div>
     );
